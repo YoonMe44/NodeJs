@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+<style>
+select#cityName {
+    padding: 9px;
+    width: 25%;
+}
+</style>
+    <h1>Current Weather Situation</h1>
+    <select name="cityName" id="cityName" onchange="myFunction()">
+        <option value="select">Please Select</option>
+        <option value="Yangon">Yangon</option>
+        <option value="Naypyidaw">Naypyidaw</option>
+        <option value="Mandalay">Mandalay</option>
+        <option value="Bagan">Bagan</option>
+        <option value="PyinOoLwin">PyinOoLwin</option>
+        <option value="TaungGyi">TaungGyi</option>
+    </select>
+    <p id="demo"></p>
+    <!-- <input placeholder="City..." id="cityName" />
+<button onclick="find()">Get weather</button> -->
+<script>
+    function myFunction() {
+      var x = document.getElementById("cityName").value;
+      document.getElementById("demo").innerHTML = "You selected: " + x;
+    }
+</script>
+    
+</body>
+</html>
